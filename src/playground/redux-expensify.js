@@ -31,7 +31,7 @@ const editExpense = (id, updates) => ({
 	id, 
 	updates
 });
-// SET_TEXT_FILTER
+SET_TEXT_FILTER
 const setTextFilter = (text = '') => ({
 	type: 'SET_TEXT_FILTER',
 	text
@@ -134,7 +134,7 @@ const getVisibleExpenses =(expenses,{ text, sortBy, startDate, endDate }) => {
 		}
 	});
 }
-// Store creation
+Store creation
 const store = createStore(
 	combineReducers({
 		expenses: expensesReducer,
@@ -165,21 +165,21 @@ store.dispatch(sortByAmount());
 // store.dispatch(setEndDate(999));
 
 
-const demoState = {
-	expenses: [{
-		id: 'awdwac',
-		description: 'Januari Rent',
-		note: 'This was the final payment for that address',
-		amount: 75000,
-		createdAt: 0
-	}],
-	filters: {
-		text: 'rent',
-		sortBy: 'amount', // date or amount
-		startDate: undefined,
-		endDate: undefined
-	}
-};
+// const demoState = {
+// 	expenses: [{
+// 		id: 'awdwac',
+// 		description: 'Januari Rent',
+// 		note: 'This was the final payment for that address',
+// 		amount: 75000,
+// 		createdAt: 0
+// 	}],
+// 	filters: {
+// 		text: 'rent',
+// 		sortBy: 'amount', // date or amount
+// 		startDate: undefined,
+// 		endDate: undefined
+// 	}
+// };
 
 
 // Object spread operator
