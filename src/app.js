@@ -10,14 +10,12 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import { setTimeout } from 'timers';
 
-
 const store = configureStore();
 
-
-store.dispatch(addExpense({description: 'Water bill', amount: 3000}));
 store.dispatch(addExpense({description: 'Gas bill', amount: 4500}));
+store.dispatch(addExpense({description: 'Water bill', amount: 3000}));
 
-store.dispatch(setTextFilter('Water'));
+store.dispatch(addExpense({description: 'Rent bill', amount: 109500}));
 
 const state =store.getState();
 
