@@ -12,7 +12,7 @@ export const ExpenseList = (props) => (
 				props.expenses.map((expense, index) => {
 					return <ExpenseListItem {...expense}
 						key={index} 
-						optionText={expense}
+						optionText={expense} 
 						
 					/>
 				})
