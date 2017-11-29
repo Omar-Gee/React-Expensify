@@ -16,13 +16,27 @@ const database = firebase.database();
 database.ref().set({
 	name:"Omar Geerman",
 	age: "31",
-	isSingle: "false",
+	stressLevel: 6,
+	job:{ 
+		title: 'sofware developer',
+		company: 'google'
+	},
 	location: {
 		city: 'Arnhem',
 		country: 'Netherlands'
 	}
 }).then(() => {
 	console.log('Data is saved!');
+}).catch((e) => {
+	console.log('error: ', e);
+})
+
+database.ref().update({
+	stressLevel: 9,
+	'job/company': 'Amazon',
+	'location/city': 'Amsterdam'
+}).then(() => {
+	console.log('updated changes!')
 }).catch((e) => {
 	console.log('error: ', e);
 })
