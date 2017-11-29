@@ -27,15 +27,8 @@ database.ref().set({
 	console.log('error: ', e);
 })
 
-// database.ref().set('This is my data');
-// database.ref('age').set(27);
-// database.ref('location/city').set('Nijmegen');
-
-database.ref('attributes').set({
-		height: 1.8,
-		weight: 80
-}).then(() => {
-	console.log('attributes added!');
-}).catch((e) => {
-	console.log('addAttributesError: ', e);
-})
+// database.ref().remove().then(() => {
+// 	console.log('data was removed');
+// }).catch((e) => {
+// 	console.log('Did not remove data ', e);
+// })
