@@ -15,39 +15,41 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
-// child_removed
-database.ref('expenses').on('child_removed', (snapshot) => {
-	console.log(snapshot.key, snapshot.val());
-});
+export { firebase, database as default };
 
-// child_changed
-database.ref('expenses').on('child_changed', (snapshot) => {
-	console.log(snapshot.key, snapshot.val());
-});
-
-// child_added
-database.ref('expenses').on('child_added', (snapshot) => {
-	console.log(snapshot.key, snapshot.val());
-});
-
-// database.ref('expenses')
-// .on('value',(snapshot) => {
-// 	const expenses = [];
-
-// 	snapshot.forEach((childSnapshot) => {
-// 		expenses.push({
-// 			id: childSnapshot.key,
-// 			...childSnapshot.val()
-// 		})
-// 	});
-// 	console.log(expenses);
+// // child_removed
+// database.ref('expenses').on('child_removed', (snapshot) => {
+// 	console.log(snapshot.key, snapshot.val());
 // });
 
-database.ref('expenses').push({
-	description: 'Water bill',
-	note: '',
-	amount: 500,
-	createdAt: 1
-});
+// // child_changed
+// database.ref('expenses').on('child_changed', (snapshot) => {
+// 	console.log(snapshot.key, snapshot.val());
+// });
+
+// // child_added
+// database.ref('expenses').on('child_added', (snapshot) => {
+// 	console.log(snapshot.key, snapshot.val());
+// });
+
+// // database.ref('expenses')
+// // .on('value',(snapshot) => {
+// // 	const expenses = [];
+
+// // 	snapshot.forEach((childSnapshot) => {
+// // 		expenses.push({
+// // 			id: childSnapshot.key,
+// // 			...childSnapshot.val()
+// // 		})
+// // 	});
+// // 	console.log(expenses);
+// // });
+
+// // database.ref('expenses').push({
+// // 	description: 'Water bill',
+// // 	note: '',
+// // 	amount: 500,
+// // 	createdAt: 1
+// // });
 
 
