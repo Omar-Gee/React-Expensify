@@ -1,65 +1,119 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ExpenseList with empty message 1`] = `
-<div>
-  <p>
-    No expenses
-  </p>
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Expenses
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Expense
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Amount
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <div
+      className="list-item list-item__message"
+    >
+      <p>
+        No expenses
+      </p>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`should render ExpsenseList with expenses 1`] = `
-<div>
-  <ExpenseListItem
-    amount={195}
-    createdAt={0}
-    description="gum"
-    id="1"
-    key="0"
-    note=""
-    optionText={
-      Object {
-        "amount": 195,
-        "createdAt": 0,
-        "description": "gum",
-        "id": "1",
-        "note": "",
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Expenses
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Expense
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Amount
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <ExpenseListItem
+      amount={195}
+      createdAt={0}
+      description="gum"
+      id="1"
+      key="0"
+      note=""
+      optionText={
+        Object {
+          "amount": 195,
+          "createdAt": 0,
+          "description": "gum",
+          "id": "1",
+          "note": "",
+        }
       }
-    }
-  />
-  <ExpenseListItem
-    amount={109500}
-    createdAt={-345600000}
-    description="Rent"
-    id="2"
-    key="1"
-    note=""
-    optionText={
-      Object {
-        "amount": 109500,
-        "createdAt": -345600000,
-        "description": "Rent",
-        "id": "2",
-        "note": "",
+    />
+    <ExpenseListItem
+      amount={109500}
+      createdAt={-345600000}
+      description="Rent"
+      id="2"
+      key="1"
+      note=""
+      optionText={
+        Object {
+          "amount": 109500,
+          "createdAt": -345600000,
+          "description": "Rent",
+          "id": "2",
+          "note": "",
+        }
       }
-    }
-  />
-  <ExpenseListItem
-    amount={4500}
-    createdAt={345600000}
-    description="creditcard"
-    id="3"
-    key="2"
-    note=""
-    optionText={
-      Object {
-        "amount": 4500,
-        "createdAt": 345600000,
-        "description": "creditcard",
-        "id": "3",
-        "note": "",
+    />
+    <ExpenseListItem
+      amount={4500}
+      createdAt={345600000}
+      description="creditcard"
+      id="3"
+      key="2"
+      note=""
+      optionText={
+        Object {
+          "amount": 4500,
+          "createdAt": 345600000,
+          "description": "creditcard",
+          "id": "3",
+          "note": "",
+        }
       }
-    }
-  />
+    />
+  </div>
 </div>
 `;
